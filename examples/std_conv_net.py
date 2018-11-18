@@ -3,30 +3,32 @@
 import tensorflow as tf
 import sys
 import os
-sys.path.append('..')
-from blocks.depth_completion_experiment import DepthCompletionExperiment
+# sys.path.append('..') #表示导入当前文件的上层目录到搜索路径中
+sys.path.append('/Users/Hall/Documents/GitHub/depth_completion/blocks')
+
+
+from depth_completion_experiment import DepthCompletionExperiment
 
 class StdConvExperiment(DepthCompletionExperiment):
 
     def __init__(self):
         super(StdConvExperiment, self).__init__()
         self.parameters.dataset_train['input'] = os.path.join(
-            "..", "datasets", "sparse_train.dataset")
+            "/Users/Hall/Documents/GitHub/depth_completion/", "datasets", "sparse_train_select.dataset")
         self.parameters.dataset_train['label'] = os.path.join(
-            "..", "datasets", "dense_train.dataset")
+            "/Users/Hall/Documents/GitHub/depth_completion/", "datasets", "dense_train_select.dataset")
 
         self.parameters.dataset_val['input'] = os.path.join(
-            "..", "datasets", "sparse_val.dataset")
+            "/Users/Hall/Documents/GitHub/depth_completion/", "datasets", "sparse_val_select.dataset")
         self.parameters.dataset_val['label'] = os.path.join(
-            "..", "datasets", "dense_val.dataset")
+            "/Users/Hall/Documents/GitHub/depth_completion/", "datasets", "dense_val_select.dataset")
 
         self.parameters.image_size = (352, 1216)
 
-        self.parameters.steps_per_epoch = 85896
+        self.parameters.steps_per_epoch = int(1)
         self.parameters.max_epochs=10
         self.parameters.batchsize = 1
-        self.parameters.steps_per_epoch = self.parameters.steps_per_epoch / \
-            self.parameters.batchsize
+        self.parameters.steps_per_epoch = int (self.parameters.steps_per_epoch/self.parameters.batchsize)
 
         self.parameters.l2_scale = 2.0
 

@@ -5,6 +5,8 @@ from experiment import Experiment
 
 from visualization import depth_colored
 
+# os.environ['KITTIPATH'] = "/Volumes/SSKData2/data_depth_annotated"
+
 
 def load_img_to_tensor(dict_type_to_imagepath):
     dict_res = {}
