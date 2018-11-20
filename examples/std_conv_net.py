@@ -4,10 +4,12 @@ import tensorflow as tf
 import sys
 import os
 # sys.path.append('..') #表示导入当前文件的上层目录到搜索路径中
-sys.path.append('/Users/Hall/Documents/GitHub/depth_completion/blocks')
-
-
+# sys.path.append('/home/gavin_qinhao/depth_completion/blocks')
 from depth_completion_experiment import DepthCompletionExperiment
+
+# from blocks.depth_completion_experiment import DepthCompletionExperiment
+
+
 
 class StdConvExperiment(DepthCompletionExperiment):
 

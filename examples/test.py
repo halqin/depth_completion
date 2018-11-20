@@ -1,1 +1,4 @@
-print ("this is test")
+import sys
+
+
+print (sys.path)

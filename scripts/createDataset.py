@@ -38,6 +38,9 @@ with open(datasetName, "w") as fp:
 # sparse_train "/Volumes/SSKData2/data_depth_velodyne/train/*/proj_depth/velodyne_raw/*/*.png"
 # print (os.environ)
 # print (os.environ('KITTIPATH'))
- # python2 createDataset.py sparse_train_qh "/Volumes/SSKData2/data_depth_annotated/train/*/proj_depth/groundtruth/*/*.png"
+ # python2 createDataset.py dense_train_qh "/home/gavin_qinhao/depthdata/data_depth_annotated/train/*/proj_depth/groundtruth/*/*.png"
   # python2 createDataset.py sparse_train_qh "/Volumes/SSKData2/data_depth_velodyne/train/*/proj_depth/velodyne_raw/*/*.png"
     # python2 createDataset.py sparse_val_qh "/Volumes/SSKData2/data_depth_velodyne/val/*/proj_depth/velodyne_raw/*/*.png"
+
+# files = glob.glob("/Volumes/SSKData2/data_depth_velodyne/val/*/proj_depth/velodyne_raw/*/*.png")
+    # files = glob.glob("~/depthdata/data_depth_annotated/train/*/proj_depth/groundtruth/*/*.png")
